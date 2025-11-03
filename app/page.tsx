@@ -1,41 +1,52 @@
-import { ThemeToggle } from '@/components/ThemeToggle';
-import Link from 'next/link';
+"use client";
+
+import { Navbar } from '@/components/layout/Navbar';
+import { Sidebar } from '@/components/layout/Sidebar';
+import { Footer } from '@/components/layout/Footer';
+import { Location } from '@/types';
+import { useState } from 'react';
+
+const mockLocations: Location[] = [
+  { id: '1', name: '002 — Foster avenue..', address: 'Foster Avenue' },
+  { id: '2', name: '001 — Vortex Business Center', address: 'Business Center' },
+];
 
 export default function Home() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
   return (
-    <main className="min-h-screen p-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-4xl font-bold">Home Page</h1>
-          <ThemeToggle />
-        </div>
+    <div className="min-h-screen flex flex-col">
+      <Navbar
+        onMenuToggle={() => setSidebarOpen(!sidebarOpen)}
+        locations={mockLocations}
+      />
 
-        <div className="space-y-6">
-          <p className="text-lg text-secondary">
-            Welcome to Next.js 15 with Tailwind CSS v4 and dark mode!
-          </p>
+      <div className="flex flex-1 overflow-hidden">
+        <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
-          <div className="p-6 rounded-lg bg-primary/10 border border-primary/20">
-            <h2 className="text-2xl font-semibold mb-2 text-primary">
-              Features
-            </h2>
-            <ul className="list-disc list-inside space-y-2 text-secondary">
-              <li>Next.js 15 with App Router</li>
-              <li>TypeScript for type safety</li>
-              <li>Tailwind CSS v4</li>
-              <li>Global dark/light mode with system preference</li>
-              <li>Persistent theme selection</li>
-            </ul>
+        <main className="flex-1 overflow-y-auto">
+          <div className="max-w-7xl mx-auto p-4 lg:p-8">
+            <h1 className="text-4xl font-bold mb-6">Dashboard Home</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[1, 2, 3, 4, 5, 6].map((item) => (
+                <div
+                  key={item}
+                  className="bg-surface rounded-2xl p-6 shadow-sm border border-border"
+                >
+                  <h3 className="text-xl font-semibold mb-2">Issue #{item}</h3>
+                  <p className="text-muted">Sample issue description</p>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <Link
-            href="/about"
-            className="inline-block px-6 py-3 bg-primary text-white rounded-lg hover:opacity-90 transition-opacity"
-          >
-            Go to About Page
-          </Link>
-        </div>
+          <Footer
+            currentPage={currentPage}
+            totalPages={18}
+            onPageChange={setCurrentPage}
+          />
+        </main>
       </div>
-    </main>
+    </div>
   );
 }
