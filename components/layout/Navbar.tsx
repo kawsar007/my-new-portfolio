@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Menu, X, Search, User, Plus } from 'lucide-react';
+import { Menu, X, User, Plus } from 'lucide-react';
 import { Location } from '@/types';
 import { ThemeToggle } from '../ThemeToggle';
 
@@ -20,7 +20,7 @@ export function Navbar({ onMenuToggle, locations = [] }: NavbarProps) {
   };
 
   return (
-    <nav className="bg-surface border-b border-border px-4 py-3 flex items-center justify-between shrink-0 z-50">
+    <nav className="border-b border-border px-4 py-2 flex items-center justify-between shrink-0 z-50">
       <div className="flex items-center gap-4">
         <button
           onClick={onMenuToggle}
@@ -53,9 +53,6 @@ export function Navbar({ onMenuToggle, locations = [] }: NavbarProps) {
 
       <div className="flex items-center gap-3">
         <ThemeToggle />
-        <button className="p-2 hover:bg-background rounded-lg transition-colors">
-          <Search className="w-5 h-5" />
-        </button>
         <button className="p-2 hover:bg-background rounded-lg transition-colors">
           <User className="w-5 h-5" />
         </button>
