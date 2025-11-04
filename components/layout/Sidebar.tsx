@@ -24,7 +24,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     <>
       <aside
         className={`${isOpen ? 'translate-x-0' : '-translate-x-full'
-          } lg:translate-x-0 fixed lg:static inset-y-0 left-0 z-40 w-20 bg-sidebar border-r border-border transition-transform duration-300 flex flex-col items-center py-6 gap-4 shrink-0`}
+          } lg:translate-x-0 fixed lg:static inset-y-0 left-0 z-40 w-20 bg-sidebar border-r border-border transition-transform duration-300 flex flex-col items-center justify-center lg:justify-start lg:py-6 gap-4 shrink-0`}
       >
         {menuItems.map((item) => {
           const Icon = item.icon;

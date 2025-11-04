@@ -33,21 +33,16 @@ export function MainLayout({ children }: MainLayoutProps) {
 
         {/* Scrollable Main Content */}
         <main className="flex-1 overflow-y-auto">
-          <div className="min-h-full flex flex-col">
-            {/* Content wrapper with flex-1 to push footer down */}
-            <div className="flex-1">
-              {children}
-            </div>
-
-            {/* Footer inside scrollable area but sticky to bottom */}
-            <Footer
-              currentPage={currentPage}
-              totalPages={18}
-              onPageChange={setCurrentPage}
-            />
-          </div>
+          {children}
         </main>
       </div>
+
+      {/* Fixed Footer - Outside scrollable area */}
+      <Footer
+        currentPage={currentPage}
+        totalPages={18}
+        onPageChange={setCurrentPage}
+      />
     </div>
   );
 }
