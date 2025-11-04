@@ -28,8 +28,8 @@ export function Footer({ currentPage, totalPages, onPageChange }: FooterProps) {
   };
 
   return (
-    <footer className="bg-primary/10 border-t border-primary/20 px-4 lg:px-8 py-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-center gap-2">
+    <footer className="bg-primary/10 border-t border-primary/20 px-4 lg:px-8 py-4 mt-auto shrink-0">
+      <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
         {getPageNumbers().map((page, index) => (
           <button
             key={index}

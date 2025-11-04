@@ -20,7 +20,7 @@ export function Navbar({ onMenuToggle, locations = [] }: NavbarProps) {
   };
 
   return (
-    <nav className="bg-surface border-b border-border px-4 py-3 flex items-center justify-between sticky top-0 z-50">
+    <nav className="bg-surface border-b border-border px-4 py-3 flex items-center justify-between shrink-0 z-50">
       <div className="flex items-center gap-4">
         <button
           onClick={onMenuToggle}

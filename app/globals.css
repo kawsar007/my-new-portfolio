@@ -25,10 +25,6 @@
   }
 }
 
-body {
-  @apply bg-background text-foreground;
-}
-
 [data-theme="light"] {
   --color-background: #f3f4f6;
   --color-surface: #ffffff;

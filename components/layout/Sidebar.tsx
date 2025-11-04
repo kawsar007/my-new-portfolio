@@ -24,7 +24,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     <>
       <aside
         className={`${isOpen ? 'translate-x-0' : '-translate-x-full'
-          } lg:translate-x-0 fixed lg:static inset-y-0 left-0 top-[57px] lg:top-0 z-40 w-20 bg-sidebar border-r border-border transition-transform duration-300 flex flex-col items-center py-6 gap-4`}
+          } lg:translate-x-0 fixed lg:static inset-y-0 left-0 z-40 w-20 bg-sidebar border-r border-border transition-transform duration-300 flex flex-col items-center py-6 gap-4 shrink-0`}
       >
         {menuItems.map((item) => {
           const Icon = item.icon;
@@ -34,6 +34,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             <Link
               key={item.href}
               href={item.href}
+              onClick={onClose}
               className={`p-3 rounded-lg transition-colors ${isActive
                 ? 'bg-primary text-primary-foreground'
                 : 'hover:bg-background'
@@ -48,7 +49,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
       {isOpen && (
         <div
-          className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30 top-[57px]"
+          className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30"
           onClick={onClose}
         />
       )}

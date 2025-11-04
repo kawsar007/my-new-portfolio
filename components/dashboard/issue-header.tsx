@@ -1,7 +1,7 @@
 'use client';
 
-import { Issue } from '@/types';
 import { ChevronRight } from 'lucide-react';
+import { Issue } from '@/types';
 
 interface IssueHeaderProps {
   issue: Issue;
