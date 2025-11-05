@@ -17,10 +17,11 @@ interface MainLayoutProps {
 
 export function MainLayout({ children }: MainLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
 
   return (
-    <div className="h-screen flex flex-col overflow-hidden">
+    <div className="h-screen flex flex-col overflow-hidden" style={{
+      background: 'var(--color-background-gradient)',
+    }}>
       {/* Fixed Header */}
       <Navbar
         onMenuToggle={() => setSidebarOpen(!sidebarOpen)}
@@ -38,11 +39,7 @@ export function MainLayout({ children }: MainLayoutProps) {
       </div>
 
       {/* Fixed Footer - Outside scrollable area */}
-      <Footer
-        currentPage={currentPage}
-        totalPages={18}
-        onPageChange={setCurrentPage}
-      />
+      <Footer />
     </div>
   );
 }
