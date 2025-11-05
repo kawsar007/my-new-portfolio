@@ -1,7 +1,7 @@
 'use client';
 
-import Link from 'next/link';
-import { Linkedin, Github, Twitter, Copyright } from 'lucide-react';
+import { Copyright } from 'lucide-react';
+import { SocialLinks } from '../common/SocialLinks';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,43 +10,8 @@ export function Footer() {
     <footer className="px-4 lg:px-8 py-2 mt-auto shrink-0">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-foreground/70">
         {/* Social Links */}
-        <div className="flex items-center justify-center gap-6 flex-wrap">
-          {/* LinkedIn */}
-          <Link
-            href="https://www.linkedin.com/in/your-profile"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative p-2 rounded-full bg-background border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
-            aria-label="Visit LinkedIn profile"
-          >
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/0 via-blue-500/10 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Linkedin className="w-4 h-4 relative z-10 text-foreground/80 group-hover:text-[#0077B5] group-hover:scale-110 transition-all duration-300" />
-          </Link>
-
-          {/* GitHub */}
-          <Link
-            href="https://github.com/your-username"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative p-2 rounded-full bg-background border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
-            aria-label="Visit GitHub profile"
-          >
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-gray-500/0 via-gray-500/10 to-gray-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Github className="w-4 h-4 relative z-10 text-foreground/80 group-hover:text-[#333] group-hover:scale-110 transition-all duration-300" />
-          </Link>
-
-          {/* Twitter */}
-          <Link
-            href="https://twitter.com/your-handle"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative p-2 rounded-full bg-background border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
-            aria-label="Visit Twitter profile"
-          >
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-sky-500/0 via-sky-500/10 to-sky-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <Twitter className="w-4 h-4 relative z-10 text-foreground/80 group-hover:text-[#1DA1F2] group-hover:scale-110 transition-all duration-300" />
-          </Link>
-        </div>
+        <SocialLinks />
+        {/* <SocialLinks className="mt-6 justify-start" size={18} /> */}
 
         {/* Copyright */}
         <div className="flex items-center gap-1 text-center sm:text-right text-foreground/70">
