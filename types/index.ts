@@ -30,3 +30,19 @@ export interface Location {
   name: string;
   address: string;
 }
+
+export interface ProjectDetails {
+  role: string;
+  description: string;
+  technology: string[];
+}
+
+export interface Project {
+  id: number;
+  image: string;
+  title: string;
+  liveLink: string;
+  github: string;
+  githubPrivecy: boolean;
+  details: ProjectDetails;
+}

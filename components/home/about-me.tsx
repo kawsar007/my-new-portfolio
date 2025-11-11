@@ -42,9 +42,16 @@ const AboutMe: React.FC = () => {
 
               <button
                 onClick={handleChatClick}
-                className="px-4 py-1 text-sm font-medium rounded-lg transition-colors duration-200 border border-border cursor-pointer"
+                className="px-4 py-1 text-sm font-medium rounded-lg transition-colors duration-200 border cursor-pointer border-purple-500 mr-2"
               >
-                Chat with me
+                Chat with Me!
+              </button>
+
+              <button
+                onClick={handleChatClick}
+                className="px-4 py-1 text-sm font-medium rounded-lg transition-colors duration-200 border border-purple-500 cursor-pointer"
+              >
+                Resume
               </button>
 
 
