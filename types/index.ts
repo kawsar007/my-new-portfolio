@@ -46,3 +46,23 @@ export interface Project {
   githubPrivecy: boolean;
   details: ProjectDetails;
 }
+
+// Education Type
+export interface EducationType {
+  id: number;
+  duration: string;
+  degree: string;
+  campus: string;
+  location: string;
+  icon: string;
+}
+
+// Experience Type
+export interface ExperienceType {
+  id: number;
+  duration: string;
+  role: string;
+  company: string;
+  icon: string;
+}
+

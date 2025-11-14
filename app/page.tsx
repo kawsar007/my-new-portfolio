@@ -1,8 +1,10 @@
 "use client";
 
 import AboutMe from "@/components/home/about-me";
-import OthersInfo from "@/components/home/others-info";
+import Education from "@/components/home/education";
+import Experience from "@/components/home/experience";
 import ProjectsCard from "@/components/home/projects";
+import { education, experience } from "@/constants";
 
 export default function Home() {
   return (
@@ -11,14 +13,10 @@ export default function Home() {
         {/* Left Column */}
         <div className="lg:col-span-2 space-y-6">
           <AboutMe />
-
-          <OthersInfo status="Ready for Review"
-            statusDescription="Waiting for Admin Review"
-            relatedIssue={{
-              title: 'Low water pressure',
-              timestamp: '20th of July • 10:25 AM',
-              severity: 'high',
-            }} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Experience data={experience} />
+            <Education data={education} />
+          </div>
         </div>
 
         {/* Right Column */}
