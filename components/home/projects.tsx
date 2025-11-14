@@ -107,7 +107,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, onChevronClick }) => (
-  <div className="bg-surface rounded-2xl p-6 shadow-sm border border-border hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
+  <div className="rounded-2xl p-6 border border-border hover:shadow-sm transition-all duration-300 hover:scale-[1.02]">
     <div className="flex items-center justify-between mb-4">
       <div>
         <h3 className="font-semibold text-foreground">{project.title}</h3>

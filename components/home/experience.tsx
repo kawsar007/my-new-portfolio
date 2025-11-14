@@ -7,14 +7,14 @@ interface ExperienceProps {
 
 const Experience: React.FC<ExperienceProps> = ({ data }) => {
   return (
-    <div className="bg-background rounded-2xl p-6 shadow-sm border border-border">
-      <h3 className="font-semibold text-xl sm:text-2xl mb-6">Experience</h3>
+    <div className="rounded-2xl p-2 sm:ml-4">
+      <h3 className="font-semibold text-xl sm:text-2xl mb-2">Experience</h3>
 
       <div className="flex flex-col gap-4">
         {data.slice(0, 2).map((item) => (
           <div
             key={item.id}
-            className="flex items-center justify-between p-4 bg-surface rounded-xl border border-border hover:border-primary/50 transition cursor-pointer"
+            className="flex items-center justify-between p-4 rounded-xl hover:border hover:border-primary/50 transition cursor-pointer"
           >
             <div>
               <h4 className="font-semibold text-lg sm:text-xl">{item.role}</h4>

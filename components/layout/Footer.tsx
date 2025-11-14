@@ -16,7 +16,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="flex items-center gap-1 text-center sm:text-right text-foreground/70">
           <Copyright className="w-4 h-4" />
-          <span>{currentYear} All Rights Reserved</span>
+          <span>{currentYear} Md Kawsar Mia. All Rights Reserved</span>
         </div>
       </div>
     </footer>

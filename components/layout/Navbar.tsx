@@ -28,13 +28,13 @@ export function Navbar({ onMenuToggle, locations = [] }: NavbarProps) {
         >
           <Menu className="w-5 h-5" />
         </button>
-        <div className="text-2xl font-bold">O1</div>
+        <div className="text-2xl font-bold">KM</div>
 
         <div className="hidden md:flex items-center gap-2">
           {activeLocations.map((location) => (
             <div
               key={location.id}
-              className="flex items-center gap-2 px-4 py-2 bg-background rounded-lg text-sm"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm"
             >
               <span className="truncate max-w-[200px]">{location.name}</span>
               <button

@@ -10,8 +10,8 @@ const AboutMe: React.FC = () => {
   };
 
   return (
-    <div className="p-6 lg:p-8 shadow-sm border border-border">
-      <div className="flex items-start gap-4 mb-6">
+    <div className="p-4 lg:p-6 border border-border">
+      <div className="flex items-start gap-4 mb-2">
         <article className="rounded-xl transition-colors">
           <div className="flex flex-col sm:flex-row items-start gap-4">
             {/* Image */}
